@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Toggle", "Toggle\Toggle.shproj", "{80D31744-67AA-4DA8-B006-D73F7B345A87}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Toggle\Toggle.projitems*{80d31744-67aa-4da8-b006-d73f7b345a87}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B876AED7-C705-44F3-B8F2-2B1F0E06B446}
+	EndGlobalSection
+EndGlobal
