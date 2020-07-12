@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Toggle", "Toggle\Toggle.shproj", "{80D31744-67AA-4DA8-B006-D73F7B345A87}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Straitjacket.Toggle", "Toggle\Straitjacket.Toggle.shproj", "{2E9FEC3F-6690-46E8-B676-9778D4B1292A}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Toggle\Toggle.projitems*{80d31744-67aa-4da8-b006-d73f7b345a87}*SharedItemsImports = 13
+		Toggle\Toggle.projitems*{2e9fec3f-6690-46e8-b676-9778d4b1292a}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

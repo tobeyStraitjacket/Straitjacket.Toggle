@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SMLHelper.V2.Utility;
+using UnityEngine;
 
 namespace Straitjacket
 {
@@ -9,29 +10,61 @@ namespace Straitjacket
             Press, Hold
         }
 
-        public KeyCode KeyCode { get; private set; }
-        public Mode KeyMode { get; private set; }
-        public bool EnabledByDefault { get; private set; }
+        private KeyCode keyCode;
+        public KeyCode KeyCode
+        {
+            get => keyCode;
+            set
+            {
+                keyCode = value;
+                Reset();
+            }
+        }
+        private Mode keyMode;
+        public Mode KeyMode
+        {
+            get => keyMode;
+            set
+            {
+                keyMode = value;
+                Reset();
+            }
+        }
+        private bool enabledByDefault;
+        public bool EnabledByDefault
+        {
+            get => enabledByDefault;
+            set
+            {
+                enabledByDefault = value;
+                Reset();
+            }
+        }
 
+
+        private int lastFrame = -1;
         private bool enabled;
         public bool Enabled
         {
             get
             {
+
                 switch (KeyMode)
                 {
                     case Mode.Press:
-                        if (Input.GetKeyDown(KeyCode))
+                        int currentFrame = Time.frameCount;
+                        if (KeyCodeUtils.GetKeyDown(KeyCode) && currentFrame > lastFrame)
                         {
                             enabled = !enabled;
+                            lastFrame = currentFrame;
                         }
                         break;
                     case Mode.Hold:
-                        if (Input.GetKeyDown(KeyCode))
+                        if (KeyCodeUtils.GetKeyDown(KeyCode))
                         {
                             enabled = !EnabledByDefault;
                         }
-                        else if (Input.GetKeyUp(KeyCode))
+                        else if (KeyCodeUtils.GetKeyUp(KeyCode))
                         {
                             enabled = EnabledByDefault;
                         }
